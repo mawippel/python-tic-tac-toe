@@ -1,5 +1,10 @@
 class Board:
 
+    """
+        0 = nothing
+        1 = X
+        2 = O
+    """
     matrix = [
         [0, 0, 0],
         [0, 0, 0],
@@ -21,7 +26,7 @@ class Board:
         return False
 
     def vertical(self):
-        for i in range(2):
+        for i in range(3):
             if self.matrix[0][i] == self.matrix[1][i] and self.matrix[1][i] == self.matrix[2][i] and self.matrix[0][i] != 0 and self.matrix[1][i] != 0 and self.matrix[2][i] != 0:
                 return True
         return False
